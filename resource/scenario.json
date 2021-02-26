@@ -1,0 +1,458 @@
+{
+    "ice": {
+        "says": [
+                "<span class='chatbot-title-conv'> Bonjour et Bienvenue</span> <br> Je suis l'assistant virtuel de la Prudence Créole.", 
+                "<span class='chatbot-title-conv'> Ce que vous pouvez me demander</span> <br> Je peux vous renseingez sur nos offres Habitation, Auto, Santé, Epargne et Retraite mais aussi vous orienter sur le site et vous aider à trouvé le bon contact pour vos démarches",
+                "<span class='chatbot-title-conv'> N'hésitez pas à me poser des questions !</span> <br> Toutes les informations sont fournies à titre indicatif et ne revêtent aucun caractère contractuel. Aucune donnée personnel ne vous est demandée."
+                
+            ],
+        "reply": [
+            {
+                "question": "Commancer",
+                "answer": "Start" 
+            }
+        ]
+        
+    }, 
+
+    "Start":{
+        "says": ["<span class='chatbot-title-conv'> Comment puis-je vous aider ?</span> <br> "],
+        "reply": [
+            {
+                "question": "Je veux découvrir un produit",
+                "answer": "decouvrir_un_produit" 
+            },
+            {
+                "question": "J ai un sinistre",
+                "answer": "sinistre"
+            },
+            {
+                "question": "Je veux me connecter à mon espace client Santé",
+                "answer": "Je veux me connecter à mon espace client Santé"
+            },
+            {
+                "question": "Je veux payer ma cotisation",
+                "answer": "Je veux payer ma cotisation"
+            }  ,
+            {
+                "question": "Je veux faire une demande ou contacter quelqu un",
+                "answer": "Je veux faire une demande ou contacter quelqu un"
+            }  
+        ]
+    },
+
+    "decouvrir_un_produit": {
+        "says": ["Vous ête un particulier ou un professionel ?"],
+        "reply": [
+            {
+                "question": "Particulier",
+                "answer": "particulier"
+            },
+            {
+                "question": "Professionel",
+                "answer": "professionel"
+            }
+        ]
+    }, "particulier": {
+        "says": ["Choisisez votre réponse."],
+        "reply": [
+            {
+                "question": "Auto",
+                "answer": "formule_Auto"
+            },{
+                "question": "Habitation",
+                "answer": "formule_Habitation"
+            },{
+                "question": "Complémentaire Santé",
+                "answer": "formule_Complémentaire_Santé"
+            },{
+                "question": "Assurance décès/Invalidité",
+                "answer": "formule_Assurence_DI"
+            },{
+                "question": "<a href='/accueil' >Autres produits </a>",
+                "answer": ""
+            }  
+        ]
+    }, "formule_Auto":{
+        "says": ["Voulez-vous voir les formules ou faire un devis Auto ?"],
+        "reply":[
+            {
+                "question": "<a href='/automobile-4-roues' > Voir les formules </a>",
+                "reply":    ""
+            },{
+                "question": "<a href='/votre-devis-automobile' > Faire un devis </a> ",
+                "reply":    ""
+            }
+        ]
+    },"formule_Habitation":{
+        "says": ["Voulez-vous voir les formules ou faire un devis Habitation ?"],
+        "reply":[
+            {
+                "question": "<a href='/multirisque-habitation' > Voir les formules </a> ",
+                "reply":    ""
+            },{
+                "question": "<a href='/devis-habitation' > Faire un devis </a> ",
+                "reply":    ""
+            }
+        ]
+    },"formule_Complémentaire_Santé":{
+        "says": ["Voulez-vous voir les formules ou faire un devis Complétaire santé ?"],
+        "reply":[
+            {
+                "question": "<a href='/complementaire-sante' > Voir les formules </a>",
+                "reply":    ""
+            },{
+                "question": "<a href='/devis-sante' > Faire un devis </a> ",
+                "reply":    ""
+            }
+        ]
+    },"formule_Assurence_DI":{
+        "says": ["Voulez-vous voir les formules ou faire un devis Assurance Décès/Invalidité ?"],
+        "reply":[
+            {
+                "question": "<a href='/prevoyance' > Voir les formules </a>",
+                "reply":    ""
+            },{
+                "question": "<a href='/assurance-deces-invalidite' > Faire un devis </a> ",
+                "reply":    ""
+            }
+        ]
+    },
+
+    "professionel": {
+        "says": ["Choisisez votre réponse."],
+        "reply": [
+            {
+                "question": " <a href='/professionnels' > Consulter l'onglet Professionnel</a> "
+            }
+        ]
+    },
+
+    "sinistre": {
+        "says": ["Choisisez votre réponse."],
+        "reply": [
+            {
+                "question": "Déclarer un sinistre",
+                "answer": "Déclarer un sinistre"
+            },
+            {
+                "question": "Obtenir ou donner des informations sur un sinistre",
+                "answer": "Obtenir ou donner des informations sur un sinistre"
+            },
+            {
+                "question": "Contacter l assistance",
+                "answer": "Contacter lassistance"
+            },
+            {
+                "question": "Trouver un garage partenaire",
+                "answer": "Trouver un garage partenaire"
+            }
+        ]
+    },
+
+    "Déclarer un sinistre": {
+        "says": ["Quel est le type de contrat concerné"],
+        "reply":[
+            {
+                "question": "Automobile",
+                "answer": "Déclarer un sinistre2"
+            },
+            {
+                "question": "Habitation ou Autre",
+                "answer": "Déclarer un sinistre2"
+            }
+        ]
+    },"Déclarer un sinistre2": {
+        "says": ["Auprès de qui avez-vous signé votre contrat ?"],
+        "reply":[
+            {
+                "question": "<a href='/nos-reseaux' > Je ne sais pas </a>"
+            },
+            {
+                "question": "<a href='/trouver-mon-agence' > Agents </a>"
+            },
+            {
+                "question": "<a href='/nos-reseaux' > Courtiers </a>"
+            },
+            {
+                "question": "<a href='/nos-reseaux' > Bureaux Prudence Créole  </a>"
+            }
+        ]
+    },
+
+    "Obtenir ou donner des informations sur un sinistre":{
+        "says": ["Quel est le type de contrat concerné"],
+        "reply":[
+            {
+                "question": "Automobile",
+                "answer": "Obtenir ou donner des informations sur un sinistre2"
+            },
+            {
+                "question": "Habitation",
+                "answer": "Obtenir ou donner des informations sur un sinistre2"
+            }
+        ]
+    }, "Obtenir ou donner des informations sur un sinistre2": {
+        "says": ["Auprès de qui avez-vous signé votre contrat ?"],
+        "reply":[
+            {
+                "question": "<a href='/suivre-ou-obtenir-des-informations-sur-un-sinistre' > Je ne sais pas </a>"
+            },
+            {
+                "question": "<a href='/trouver-mon-agence' > Agents </a>"
+            },
+            {
+                "question": "<a href='/suivre-ou-obtenir-des-informations-sur-un-sinistre' > Courtiers </a>",
+                "answer": "sinistre_Habitation_Autre"
+            },
+            {
+                "question": "<a href='/suivre-ou-obtenir-des-informations-sur-un-sinistre   ' > Bureaux Prudence Créole </a>",
+                "answer": "sinistre_Habitation_Autre"
+            }
+        ]
+    },
+
+    "Contacter lassistance":{
+        "says": ["Dans quel département êtes-vous situé ?"],
+        "reply":[
+            {
+                "question": "Réunion",
+                "answer": "Contacter lassistance reunion"
+                
+            },
+            {
+                "question": "Mayotte",
+                "answer": "Contacter lassistance mayotte"
+            }
+        ]
+    },"Contacter lassistance reunion": {
+        "says": ["Vous avez choisis Réunion :"],
+        "reply":[
+            {
+                "question": "<a href='tel:0262 20 48 48' > 0262 20 48 48 </a>"
+            },{
+                "question": "<a href='/contact' > Nous catacter </a>"
+            }
+        ]
+    },"Contacter lassistance mayotte": {
+        "says": ["Vous avez choisis Mayotte :"],
+        "reply":[
+            {
+                "question": "<a href='tel:0269 63 48 48' > 0269 63 48 48 </a>"
+            },{
+                "question": "<a href='/contact' > Nous catacter </a>"
+            }
+        ]
+    },
+
+    "Trouver un garage partenaire": {
+        "says": ["Vous souhaitez réparer "],
+        "reply":[
+            {
+                "question": "<a href='/#' > un Bris de glaces </a>"
+            },
+            {
+                "question": "<a href='/#' > Autre </a>"
+            }
+        ]
+    },
+
+    "Je veux me connecter à mon espace client Santé": {
+        "says": ["Besoin d aide pour accéder à votre espace client ? Je suis là pour vous guider !", "Est-ce la première fois que vous vous connectez à votre espace client ?"],
+        "reply":[
+            {
+                "question": "oui",
+                "answer": "Je veux me connecter à mon espace client Santé oui"
+            },
+            {
+                "question": "non",
+                "answer": "Je veux me connecter à mon espace client Santé non"
+            }
+        ]
+    }, "Je veux me connecter à mon espace client Santé oui":{
+        "says": ["Quel est le problème que vous rencontrez ?"],
+        "reply":[
+            {
+                "question": "Je n ai pas reçus mon code confidentiel suite à l activation",
+                "answer": " "
+            },
+            {
+                "question": "Mon nom ou ma raison social n est pas reconnu(e)",
+                "answer": " "
+            },
+            {
+                "question": "J ai un problème avec mon numéro de contrat",
+                "answer": " "
+            },
+            {
+                "question": "Je n ai pas reçu mon identifiant",
+                "answer": " "
+            }
+        ]
+    }, "Je veux me connecter à mon espace client Santé non":{
+        "says": ["Votre code confidentiel est envoyé à la fin de la procédure d activation de votre espace client. Il vous sera communiqué par email sous 10 minutes, ou courier selon votre choix et les coordonnées que vous nous avez transmises.", " Si vous n avez pas reçu votre code confidentiel suite à la procédure d'activation, je vous invite à cliquer sur le lien ci dessous : \n <a href=\"# \"> Récupérer mon code confidentiel </a>", "Si après 10 minutes vous ne recevez toujours pas votre identifiant, vous pouvez nous contacter en cliquant sur ce lien : \n <a href=\"# \"> Contactez-nous </a>  "],
+        "reply":[
+            
+        ]
+    }, 
+    
+    "Je veux payer ma cotisation":{
+        "says": ["Payer votre cotisation ?"],
+        "reply":[
+            {
+                "question": "<a href='/paiement-en-ligne' > oui </a>"
+                
+            },
+            {
+                "question": "non",
+                "answer": "Start"
+            }
+        ]
+    },
+
+    "Je veux faire une demande ou contacter quelqu un":{
+        "says": ["Pour vous aider à contacter votre interlocuteur, pouvez vous me confirmer que vous êtes bien déjà client chez nous"],
+        "reply":[
+            {
+                "question": "oui",
+                "answer": "demande ou contacter oui"
+                
+            },  
+            {
+                "question": "non",
+                "answer": "demande ou contacter non"
+            }
+        ]
+    }, "demande ou contacter non": {
+        "says": ["Bienvenue chez Prudence Créole, que souhaitez-vous faire ?"],
+        "reply":[
+            {
+                "question": "Etre rappelé par un conseiller"
+                
+            },
+            {
+                "question": " <a href='/trouver-mon-agence' > Localiser l agence la plus proche   </a>"
+            }
+        ]
+    }, "demande ou contacter oui": {
+        "says": ["Pouvez-vous préciser le motif de votre demande"],
+        "reply":[
+            {
+                "question": "Déclarer ou suivre une prestation Santé",
+                "answer": "Déclarer ou suivre une prestation Santé"
+                
+            },
+            {
+                "question": "Gérer un contrat en cours",
+                "answer": "Gérer un contrat en cours"
+            },
+            {
+                "question": "<a href='/faire-une-reclamation' > Faire une réclamation  </a>"
+            },
+            {
+                "question": " <a href='/trouver-mon-agence' > Autres demandes  </a>"
+            }
+        ]
+    }, 
+    
+    "Déclarer ou suivre une prestation Santé": {
+        "says": ["Déclarer ou suivre une prestation Santé"],
+        "reply":[
+            {
+                "question": "Comment me faire rembourser mes frais médicaux ?",
+                "answer": "Comment me faire rembourser mes frais médicaux"
+                
+            },
+            {
+                "question": "Signaler un problème de carte à puce",
+                "answer": ""
+            },
+            {
+                "question": "Ajouter un bénéficaire ayant-droit"
+            },
+            {
+                "question": "Déclarer une naissance et obtenir ma  prime de naissance",
+                "answer": ""
+            }
+        ]
+    }, "Comment me faire rembourser mes frais médicaux":{
+        "says": ["De quoi s agit-il ?"],
+        "reply":[
+            {
+                "question": "Soins courants",
+                "answer": "Medical"
+                
+            },
+            {
+                "question": "Hospitalisation",
+                "answer": "Medical"
+            },
+            {
+                "question": "Optique",
+                "answer": "Medical"
+            },
+            {
+                "question": "Dentaire",
+                "answer": "Medical"
+            }
+        ]
+    }, "Medical":{
+        "says": ["Que souhaitez-vous faire ?"],
+        "reply":[
+            {
+                "question": "Nous contacter au<a href='tel:0262 70 95 00' > 0262 70 95 00.</a>"
+            },
+            {
+                "question": "GESTION DES FRAIS MEDICAUX A LA REUNION <a href='/sites/default/files/inline-images/Mode%20operatoire%20-%20Gestion%20des%20frais%20medicaux%20a%20La%20Reunion.pdf' > voir ici </a>",
+                "answer": ""
+            }
+        ]
+    },
+    
+    
+    
+    "Gérer un contrat en cours": {
+        "says": ["Pouvez-vous préciser le motif de votre demande"],
+        "reply":[
+            {
+                "question": "Obtenir une attestation ou un document lié à mon contrat",
+                "answer": "contrat"
+                
+            },
+            {
+                "question": "Modifier mon contrat",
+                "answer": "contrat"
+            },
+            {
+                "question": "<a href='/faire-une-reclamation' > Agir sur mon contrat d'épargne ou retraite ou Prévoyance  </a>"
+            },
+            {
+                "question": "Résilier ou suivre une résiliation de mon contrat",
+                "answer": "contrat"
+            }
+        ]
+    },
+
+    "contrat":{
+        "says": ["Auprès de qui avez-vous signé votre contrat ?"],
+        "reply":[
+            {
+                "question": "<a href='/trouver-mon-agence' > Agents </a>"
+                
+            },
+            {
+                "question": "Courtiers",
+                "reply": "Contactez votre interlocuteur direct (Vous trouverais les informations concernant votre interlocuteur sur votre avis d échéance). "
+            },
+            {
+                "question": "<a href='/contact' > Bureaux directs </a>"
+            },
+            {
+                "question": "<a href='/nos-reseaux' > Je ne sais pas </a>"
+            }
+        ]
+    }
+
+
+
+} 
