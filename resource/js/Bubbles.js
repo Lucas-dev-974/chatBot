@@ -57,7 +57,6 @@ function Bubbles(container, self, options) {
       return
 
     // save to memory
-    console.log(say);
     interactionsHistory.push({ say: say, reply: reply })
   }
 
@@ -143,7 +142,6 @@ function Bubbles(container, self, options) {
       for (var i = 0; i < turn.reply.length; i++) {
         
         ;(function(el, count) {
-          console.log(el.question);
           funcParam = el.params ? "test('" + el.params + "')" : "";
           categ     = el.categ  ? el.categ+ ": " : ""
 
