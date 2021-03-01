@@ -245,7 +245,7 @@ function Bubbles(container, self, options) {
     bubbleContent.innerHTML = say
     content.appendChild(bubble)
     bubble.appendChild(bubbleContent)
-    bubbleWrap.insertBefore(content, bubbleTyping)
+    bubbleWrap.append(content)
 
     // answer picker styles
     if (reply !== "") {

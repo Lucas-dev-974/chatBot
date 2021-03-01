@@ -13,8 +13,12 @@
     
 <div>
     <img id="openChat" src="./log.jpeg" alt="logo" width="50px" class="m-2 rounded-circle float-right" style="position: absolute; bottom: 10px; right: 10px; cursor: pointer;"/>
+    
     <div id="chatbot">
         <div class="d-flex w-100">
+            <div class="col-1">
+                <img id="realoadChat" src="./reload.svg"  alt="close" width="50%" class="m-2" style="cursor: pointer; margin-top: 15px !important;"/>
+            </div>
             <div class="col py-4">
                 <img id="logoChat" src="./log.jpeg" alt="logo" width="50px" class="m-2 float-right"/>
             </div>
