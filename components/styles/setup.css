@@ -1,12 +1,39 @@
 /* setup container styles */
-.bubble-container {
-	height: 580px !important;
 
-	width: 100%;
-	margin: 0 auto;
-	overflow: hidden;
+@media (min-width: 600px) and (max-width: 2000px){
+	.bubble-container {
+		height: 580px !important;
+		width: 100%;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	#chatbot{
+		position: absolute; 
+		bottom: 20px; 
+		right: 20px; 
+		background-color: #3e3e3e;
+		transition: all 0.2s;
+		width: 400px;
+	}
+	
 }
-
+@media (min-width: 0) and (max-width: 600px){
+	.bubble-container {
+		height: 100% !important;
+		width: 100%;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	#chatbot{
+		position: absolute; 
+		background-color: #3e3e3e;
+		transition: all 0.2s;
+		width: 90vw;
+		height: 93vh;
+		margin: 15px;
+	}
+	
+}
 .bubble-wrap {
 	height: 513px !important;
 	background : #E9E9E9;  
@@ -27,14 +54,6 @@ body {
 }
 
 
-#chatbot{
-	position: absolute; 
-	bottom: 20px; 
-	right: 20px; 
-	background-color: #3e3e3e;
-	transition: all 0.2s;
-	width: 400px;
-}
 
 #logoChat{
 	position: absolute;
