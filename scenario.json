@@ -11,7 +11,6 @@
                 "answer": "Start" 
             }
         ]
-        
     }, 
 
     "Start":{
@@ -71,46 +70,44 @@
                 "question": "Assurance décès/Invalidité",
                 "answer": "formule Assurence Décès Invalidité"
             },{
-                "question": "<a href='/accueil' >Autres produits </a>",
-                "answer": ""
+                "question": "Autres produits",
+                "links": "/accueil"
             }  
         ]
     }, "formule Auto":{
         "says": ["Voulez-vous voir les formules ou faire un devis Auto ?"],
         "reply":[
             {
-                "question": "<a href='/automobile-4-roues' > Voir les formules </a>"
+                "question": "Voir les formules", "links": "/automobile-4-roues"
             },{
-                "question": "<a href='/votre-devis-automobile' > Faire un devis </a> "  
+                "question": "Faire un devis","links": "/votre-devis-automobile"
             }
         ]
     },"formule Habitation":{
         "says": ["Voulez-vous voir les formules ou faire un devis Habitation ?"],
         "reply":[
             {
-                "question": "<a href='/multirisque-habitation' > Voir les formules </a> "
+                "question": "Voir les formules ", "links": "/multirisque-habitation"
             },{
-                "question": "<a href='/devis-habitation' > Faire un devis </a> "
+                "question": "Faire un devis ", "links": "/devis-habitation"
             }
         ]
     },"formule Complémentaire Santé":{
         "says": ["Voulez-vous voir les formules ou faire un devis Complétaire santé ?"],
         "reply":[
             {
-                "question": "<a href='/complementaire-sante' > Voir les formules </a>"
+                "question": "Voir les formules ", "links": "/complementaire-sante"
             },{
-                "question": "<a href='/devis-sante' > Faire un devis </a> "
+                "question": "Faire un devis ", "links": "/devis-sante"
             }
         ]
     },"formule Assurence Décès Invalidité":{
         "says": ["Voulez-vous voir les formules ou faire un devis Assurance Décès/Invalidité ?"],
         "reply":[
             {
-                "question": "<a href='/prevoyance' > Voir les formules </a>",
-                "reply":    ""
+                "question": "Voir les formules ", "links": "/prevoyance"
             },{
-                "question": "<a href='/assurance-deces-invalidite' > Faire un devis </a> ",
-                "reply":    ""
+                "question": "Faire un devis ", "links": "/assurance-deces-invalidite"
             }
         ]
     },
@@ -119,7 +116,7 @@
         "says": ["Choisisez votre réponse."],
         "reply": [
             {
-                "question": " <a href='/professionnels' > Consulter l'onglet Professionnel</a> "
+                "question": "Consulter l'onglet Professionnel", "links": "/professionnels"
             }
         ]
     },
@@ -162,16 +159,16 @@
         "says": ["Auprès de qui avez-vous signé votre contrat ?"],
         "reply":[
             {
-                "question": "<a href='/nos-reseaux' > Je ne sais pas </a>"
+                "question": "Je ne sais pas ", "links": "/nos-reseaux"
             },
             {
-                "question": "<a href='/trouver-mon-agence' > Agents </a>"
+                "question": "Agents ", "links": "/trouver-mon-agence"
             },
             {
-                "question": "<a href='/nos-reseaux' > Courtiers </a>"
+                "question": "Courtiers ", "links": "/nos-reseaux"
             },
             {
-                "question": "<a href='/nos-reseaux' > Bureaux Prudence Créole  </a>"
+                "question": "Bureaux Prudence Créole", "links": "/nos-reseaux"
             }
         ]
     },
@@ -192,16 +189,16 @@
         "says": ["Auprès de qui avez-vous signé votre contrat ?"],
         "reply":[
             {
-                "question": "<a href='/suivre-ou-obtenir-des-informations-sur-un-sinistre' > Je ne sais pas </a>"
+                "question": "Je ne sais pas ", "links": "/suivre-ou-obtenir-des-informations-sur-un-sinistre"
             },
             {
-                "question": "<a href='/trouver-mon-agence' > Agents </a>"
+                "question": "Agents ", "links": "/trouver-mon-agence"
             },
             {
-                "question": "<a href='/suivre-ou-obtenir-des-informations-sur-un-sinistre' > Courtiers </a>"
+                "question": "Courtiers ", "links": "/suivre-ou-obtenir-des-informations-sur-un-sinistre"
             },
             {
-                "question": "<a href='/suivre-ou-obtenir-des-informations-sur-un-sinistre   ' > Bureaux Prudence Créole </a>"
+                "question": "Bureaux Prudence Créole", "links": "/suivre-ou-obtenir-des-informations-sur-un-sinistre"
             }
         ]
     },
@@ -225,7 +222,7 @@
             {
                 "question": "<a href='tel:0262 20 48 48' > 0262 20 48 48 </a>"
             },{
-                "question": "<a href='/contact' > Nous contacter </a>"
+                "question": " Nous contacter ", "links": "/contact"
             }
         ]
     },"Contacter lassistance mayotte": {
@@ -234,7 +231,7 @@
             {
                 "question": "<a href='tel:0269 63 48 48' > 0269 63 48 48 </a>"
             },{
-                "question": "<a href='/contact' > Nous contacter </a>"
+                "question": "Nous contacter ", "links": "/contact"
             }
         ]
     },
@@ -243,10 +240,10 @@
         "says": ["Vous souhaitez réparer "],
         "reply":[
             {
-                "question": "<a href='/#' > Un bris de glaces </a>"
+                "question": "Un bris de glaces ", "links": "#"
             },
             {
-                "question": "<a href='/#' > Autre </a>"
+                "question": "Autre ", "links": "#"
             }
         ]
     },
@@ -255,10 +252,10 @@
         "says": ["Besoin d'aide pour accéder à votre espace client ? Je suis là pour vous guider !", "Est-ce la première fois que vous vous connectez à votre espace client ?"],
         "reply":[
             {
-                "question": "<a href='/celrcg/action/assure/pcr/insrc' > oui </a>"
+                "question": "non ", "links": "/celrcg/action/assure/pcr/insrc"
             },
             {
-                "question": "<a href='/celrcg/action/assure/pcr/autrc' > oui </a>"
+                "question": "oui ", "links": "/celrcg/action/assure/pcr/autrc"
             }
         ]
     },
@@ -267,8 +264,7 @@
         "says": ["Payer votre cotisation ?"],
         "reply":[
             {
-                "question": "<a href='/paiement-en-ligne' > oui </a>"
-                
+                "question": "oui ", "links": "/paiement-en-ligne"
             },
             {
                 "question": "non",
@@ -295,10 +291,9 @@
         "reply":[
             {
                 "question": "Etre rappelé par un conseiller"
-                
             },
             {
-                "question": " <a href='/trouver-mon-agence' > Localiser l agence la plus proche   </a>"
+                "question": "Localiser l agence la plus proche", "links": "/trouver-mon-agence"
             }
         ]
     }, "demande ou contacter oui": {
@@ -314,10 +309,10 @@
                 "answer": "Gérer un contrat en cours"
             },
             {
-                "question": "<a href='/faire-une-reclamation' > Faire une réclamation  </a>"
+                "question": "Faire une réclamation  ", "links": "/faire-une-reclamation"
             },
             {
-                "question": " <a href='/trouver-mon-agence' > Autres demandes  </a>"
+                "question": " Autres demandes  ", "links": "/trouver-mon-agence"
             }
         ]
     }, 
@@ -395,7 +390,7 @@
                 "answer": "contrat"
             },
             {
-                "question": "<a href='/faire-une-reclamation' > Agir sur mon contrat d'épargne ou retraite ou Prévoyance  </a>"
+                "question": "Agir sur mon contrat d'épargne ou retraite ou Prévoyance", "links": "/faire-une-reclamation"
             },
             {
                 "question": "Résilier ou suivre une résiliation de mon contrat",
@@ -408,7 +403,7 @@
         "says": ["Auprès de qui avez-vous signé votre contrat ?"],
         "reply":[
             {
-                "question": "<a href='/trouver-mon-agence' > Agents </a>"
+                "question": "Agents", "links": "/trouver-mon-agence"
                 
             },
             {
@@ -416,10 +411,10 @@
                 "reply": "Contactez votre interlocuteur direct (Vous trouverais les informations concernant votre interlocuteur sur votre avis d échéance). "
             },
             {
-                "question": "<a href='/contact' > Bureaux directs </a>"
+                "question": "Bureaux directs ", "links": "/contact"
             },
             {
-                "question": "<a href='/nos-reseaux' > Je ne sais pas </a>"
+                "question": "Je ne sais pas ", "links": "/nos-reseaux"
             }
         ]
     },
