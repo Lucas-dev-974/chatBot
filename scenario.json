@@ -1,10 +1,9 @@
 {
     "ice": {
         "says": [
-                "<span class='chatbot-title-conv'> Bonjour et Bienvenue</span> <br> Je suis l'assistant virtuel de la Prudence Créole.", 
-                "<span class='chatbot-title-conv'> Ce que vous pouvez me demander</span> <br> Je peux vous renseingez sur nos offres Habitation, Auto, Santé, Epargne et Retraite mais aussi vous orienter sur le site et vous aider à trouvé le bon contact pour vos démarches",
-                "<span class='chatbot-title-conv'> N'hésitez pas à me poser des questions !</span> <br> Toutes les informations sont fournies à titre indicatif et ne revêtent aucun caractère contractuel. Aucune donnée personnel ne vous est demandée."
-                
+                "Bonjour et Bienvenue <br> Je suis l'assistant virtuel de la Prudence Créole.", 
+                "Ce que vous pouvez me demander <br> Je peux vous renseingez sur nos offres Habitation, Auto, Santé, Epargne et Retraite mais aussi vous orienter sur le site et vous aider à trouvé le bon contact pour vos démarches",
+                "N'hésitez pas à me poser des questions ! <br> Toutes les informations sont fournies à titre indicatif et ne revêtent aucun caractère contractuel. Aucune donnée personnel ne vous est demandée."
             ],
         "reply": [
             {
@@ -64,13 +63,13 @@
                 "answer": "formule Auto"
             },{
                 "question": "Habitation",
-                "answer": "formule_Habitation"
+                "answer": "formule Habitation"
             },{
                 "question": "Complémentaire Santé",
-                "answer": "formule_Complémentaire_Santé"
+                "answer": "formule Complémentaire Santé"
             },{
                 "question": "Assurance décès/Invalidité",
-                "answer": "formule_Assurence_DI"
+                "answer": "formule Assurence Décès Invalidité"
             },{
                 "question": "<a href='/accueil' >Autres produits </a>",
                 "answer": ""
@@ -85,29 +84,25 @@
                 "question": "<a href='/votre-devis-automobile' > Faire un devis </a> "  
             }
         ]
-    },"formule_Habitation":{
+    },"formule Habitation":{
         "says": ["Voulez-vous voir les formules ou faire un devis Habitation ?"],
         "reply":[
             {
-                "question": "<a href='/multirisque-habitation' > Voir les formules </a> ",
-                "reply":    ""
+                "question": "<a href='/multirisque-habitation' > Voir les formules </a> "
             },{
-                "question": "<a href='/devis-habitation' > Faire un devis </a> ",
-                "reply":    ""
+                "question": "<a href='/devis-habitation' > Faire un devis </a> "
             }
         ]
-    },"formule_Complémentaire_Santé":{
+    },"formule Complémentaire Santé":{
         "says": ["Voulez-vous voir les formules ou faire un devis Complétaire santé ?"],
         "reply":[
             {
-                "question": "<a href='/complementaire-sante' > Voir les formules </a>",
-                "reply":    ""
+                "question": "<a href='/complementaire-sante' > Voir les formules </a>"
             },{
-                "question": "<a href='/devis-sante' > Faire un devis </a> ",
-                "reply":    ""
+                "question": "<a href='/devis-sante' > Faire un devis </a> "
             }
         ]
-    },"formule_Assurence_DI":{
+    },"formule Assurence Décès Invalidité":{
         "says": ["Voulez-vous voir les formules ou faire un devis Assurance Décès/Invalidité ?"],
         "reply":[
             {
@@ -260,40 +255,13 @@
         "says": ["Besoin d'aide pour accéder à votre espace client ? Je suis là pour vous guider !", "Est-ce la première fois que vous vous connectez à votre espace client ?"],
         "reply":[
             {
-                "question": "oui",
-                "answer": "Je veux me connecter à mon espace client Santé oui"
+                "question": "<a href='/celrcg/action/assure/pcr/insrc' > oui </a>"
             },
             {
-                "question": "non",
-                "answer": "Je veux me connecter à mon espace client Santé non"
+                "question": "<a href='/celrcg/action/assure/pcr/autrc' > oui </a>"
             }
         ]
-    }, "Je veux me connecter à mon espace client Santé oui":{
-        "says": ["Quel est le problème que vous rencontrez ?"],
-        "reply":[
-            {
-                "question": "Je n'ai pas reçus mon code confidentiel suite à l'activation",
-                "answer": " "
-            },
-            {
-                "question": "Mon nom ou ma raison social n est pas reconnu(e)",
-                "answer": " "
-            },
-            {
-                "question": "J'ai un problème avec mon numéro de contrat",
-                "answer": " "
-            },
-            {
-                "question": "Je n'ai pas reçu mon identifiant",
-                "answer": " "
-            }
-        ]
-    }, "Je veux me connecter à mon espace client Santé non":{
-        "says": ["Votre code confidentiel est envoyé à la fin de la procédure d activation de votre espace client. Il vous sera communiqué par email sous 10 minutes, ou courier selon votre choix et les coordonnées que vous nous avez transmises.", " Si vous n avez pas reçu votre code confidentiel suite à la procédure d'activation, je vous invite à cliquer sur le lien ci dessous : \n <a href=\"# \"> Récupérer mon code confidentiel </a>", "Si après 10 minutes vous ne recevez toujours pas votre identifiant, vous pouvez nous contacter en cliquant sur ce lien : \n <a href=\"# \"> Contactez-nous </a>  "],
-        "reply":[
-            
-        ]
-    }, 
+    },
     
     "Je veux payer ma cotisation":{
         "says": ["Payer votre cotisation ?"],
