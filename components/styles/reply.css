@@ -21,7 +21,7 @@
 }
 .bubble.reply .bubble-content .bubble-button {
   z-index: -999999;
-  background: rgba(44, 44, 44, 0.67);
+  background: rgba(44, 44, 44, 0.95);
   color: rgb(228, 228, 228);
   padding: 8px 16px;
   border-radius: 15px 15px 5px 5px;
@@ -102,15 +102,3 @@
 .bubble .bubble-content input:read-only {
   background: linear-gradient(166deg, #48121d, #0d4058 100%) !important;
 }
-
-/* .bubble-button {
-  background-color: rgb(79, 79, 79);
-  color: rgb(211, 211, 211);
-  cursor: pointer;
-  transition: all 200ms;
-}
-
-.bubble-button:hover{
-  background-color: rgb(36, 36, 36);
-  color: rgb(237, 237, 237);
-} */ 
