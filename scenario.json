@@ -40,7 +40,7 @@
     },
 
     "decouvrir un produit": {
-        "says": ["Vous ête un particulier ou un professionel ?"],
+        "says": ["Vous êtes un particulier ou un professionel ?"],
         "reply": [
             {
                 "question": "Particulier",
