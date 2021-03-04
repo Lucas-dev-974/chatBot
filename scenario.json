@@ -1,8 +1,8 @@
 {
     "ice": {
         "says": [
-                "Bonjour et Bienvenue <br> Je suis l'assistant virtuel de la Prudence Créole.", 
-                "Ce que vous pouvez me demander <br> Je peux vous renseingez sur nos offres Habitation, Auto, Santé, Epargne et Retraite mais aussi vous orienter sur le site et vous aider à trouvé le bon contact pour vos démarches",
+                "Bonjour et Bienvenue, <br> Je suis l'assistant virtuel de la Prudence Créole.", 
+                "Ce que vous pouvez me demander <br> Je peux vous renseigner sur nos offres Habitation, Auto, Santé, Epargne et Retraite, mais aussi vous orienter sur le site et vous aider à trouver le bon contact pour vos démarches",
                 "N'hésitez pas à me poser des questions ! <br> Toutes les informations sont fournies à titre indicatif et ne revêtent aucun caractère contractuel. Aucune donnée personnel ne vous est demandée."
             ],
         "reply": [
@@ -14,7 +14,6 @@
     }, 
 
     "Start":{
-        "inReply": 1,
         "says": ["<span class='chatbot-title-conv'> Comment puis-je vous aider ?</span> <br> "],
         "reply": [
             {
@@ -41,8 +40,6 @@
     },
 
     "decouvrir un produit": {
-        "inSays": 1,
-        "title": "decouvrir un produit",
         "says": ["Vous ête un particulier ou un professionel ?"],
         "reply": [
             {
@@ -55,7 +52,7 @@
             }
         ]
     }, "particulier": {
-        "says": ["Vous ête donc un particulier, quel produits souhaitez-vous découvrir ?"],
+        "says": ["Vous êtes donc un particulier, quel produits souhaitez-vous découvrir ?"],
         "reply": [
             {
                 "question": "Auto",
@@ -113,7 +110,7 @@
     },
 
     "professionel": {
-        "says": ["Choisisez votre réponse."],
+        "says": ["En tant que professionnel nous vous invitons à visiter l'onglet professionnel"],
         "reply": [
             {
                 "question": "Consulter l'onglet Professionnel", "links": "/professionnels"
@@ -237,10 +234,10 @@
     },
 
     "Trouver un garage partenaire": {
-        "says": ["Vous souhaitez réparer "],
+        "says": ["Vous souhaitez réparer"],
         "reply":[
             {
-                "question": "Un bris de glaces ", "links": "#"
+                "question": "Un bris de glaces", "links": "#"
             },
             {
                 "question": "Autre ", "links": "#"
@@ -274,7 +271,7 @@
     },
 
     "Je veux faire une demande ou contacter quelqu un":{
-        "says": ["Pour vous aider à contacter votre interlocuteur, pouvez vous me confirmer que vous êtes bien déjà client chez nous"],
+        "says": ["Pour vous aider à contacter votre interlocuteur, pouvez-vous me confirmer que vous êtes bien déjà client chez nous"],
         "reply":[
             {
                 "question": "oui",
