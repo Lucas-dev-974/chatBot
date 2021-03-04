@@ -148,7 +148,7 @@
                 "answer": "Déclarer un sinistre2"
             },
             {
-                "question": "Habitation ou Autre",
+                "question": "Habitation ou Autres",
                 "answer": "Déclarer un sinistre2"
             }
         ]
@@ -234,19 +234,20 @@
     },
 
     "Trouver un garage partenaire": {
-        "says": ["Vous souhaitez réparer"],
+        "says": ["Que souhaitez-vous réparer ?"],
         "reply":[
             {
                 "question": "Un bris de glaces", "links": "#"
             },
             {
-                "question": "Autre ", "links": "#"
+                "question": "Autre", "links": "#"
             }
         ]
     },
 
     "Je veux me connecter à mon espace client Santé": {
-        "says": ["Besoin d'aide pour accéder à votre espace client ? Je suis là pour vous guider !", "Est-ce la première fois que vous vous connectez à votre espace client ?"],
+        "says": ["Besoin d'aide pour accéder à votre espace client ? Je suis là pour vous guider !", 
+                 "Est-ce la première fois que vous vous connectez à votre espace client ?"],
         "reply":[
             {
                 "question": "non ", "links": "/celrcg/action/assure/pcr/insrc"
@@ -294,7 +295,7 @@
             }
         ]
     }, "demande ou contacter oui": {
-        "says": ["Pouvez-vous préciser le motif de votre demande"],
+        "says": ["  "],
         "reply":[
             {
                 "question": "Déclarer ou suivre une prestation Santé",
@@ -371,8 +372,6 @@
             }
         ]
     },
-    
-    
     
     "Gérer un contrat en cours": {
         "says": ["Pouvez-vous préciser le motif de votre demande"],
