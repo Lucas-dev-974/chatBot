@@ -340,7 +340,7 @@
             }
         ]
     }, "Comment me faire rembourser mes frais médicaux":{
-        "says": ["De quoi s agit-il ?"],
+        "says": ["De quoi s'agit-il ?"],
         "reply":[
             {
                 "question": "Soins courants",
