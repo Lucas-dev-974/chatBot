@@ -46,16 +46,14 @@ function initChatComponents() {
         strip(e.question).includes(strip(o.input)) && o.input.length > 0
           ? (found = e.answer)
           : found ? null : (found = false)
-
-          console.log(e);
       })
 
-      console.log(typeof (o.convo));
       for (const [key, value] of Object.entries(o.convo)) {
         strip(key).includes(strip(o.input)) && o.input.length > 0 ? 
-        (found = key) : found ? null : (found = false)
+        (found = key) : found ? null : (found = false) 
         if(found) break
       }
+
 
       found ? match(found) : miss()
     }
@@ -125,13 +123,10 @@ function reload() {
 }
 
 function AutoResponse(value) {
-  console.log("function response automate");
   let div = document.createElement('div')
   div.setAttribute('class', 'bubble say')
   div.innerHTML = value
-  console.log(div);
   $('.bubble-typing.imagine').remove()
   $('.bubble-wrap').append(div)
-
   this.chatWindow.talk(convo, 'AnotherQuestion')
 }
