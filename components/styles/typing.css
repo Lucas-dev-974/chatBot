@@ -20,6 +20,7 @@
 .dot_1 { animation-delay: 0.45s; }
 .dot_2 { animation-delay: 1.05s; }
 .dot_3 { animation-delay: 1.35s; }
+
 @keyframes bounce_dot {
 	0% {}
 	50% { background-color:rgb(0,0,0); }

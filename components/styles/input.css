@@ -1,11 +1,15 @@
 /* style user input field */
 .bubble-container .input-wrap {
-	display: block;
+	position: absolute;
+	bottom: 0;
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: #2c2c2c;
-	background-color: #2c2c2c;
-	width: 108%;
+	background-color: #ff0000;
+	width: 100%;
 }
+
+
+
 .bubble-container .input-wrap textarea {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: #2c2c2c;
@@ -18,4 +22,7 @@
 	padding: 10px 15px;
 	outline: none;
 	box-shadow: 0 0 0 1px #d0d0d0 inset;
+	width: 100% !important;
+	bottom: 0 !important;
+	position: absolute;
 }

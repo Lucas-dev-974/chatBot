@@ -91,7 +91,7 @@ function Bubbles(container, self, options) {
           ? lastBubble.classList.add("bubble-hidden")
           : false
         addBubble(
-          '<span class="bubble-button bubble-pick">' + this.value + "</span>",
+          '<span class="bubble-button bubble-pick" z-index="-9999">' + this.value + "</span>",
           function () { },
           "reply reply-freeform"
         )
@@ -143,7 +143,7 @@ function Bubbles(container, self, options) {
           let autoResponse = el.params ? "AutoResponse('" + el.params.value + "')"  : "";
           let question        = el.links  ? ("<a href='" + el.links + "'>" + el.question + "</a>") : el.question
           questionsHTML +=
-          '<span class="bubble-button" style="animation-delay: ' + animationTime / 2 * count + 'ms"' + 
+          '<span  class="bubble-button" style="animation-delay: ' + animationTime / 2 * count + 'ms"' + 
           'onClick="' + self + ".answer('" + el.answer + "', '" + el.question.replace("'", " ") + "')" + 
           ";this.classList.add('bubble-pick');" + autoResponse +" \">" +  question + "</span>"
         })(turn.reply[i], i)
