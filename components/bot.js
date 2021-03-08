@@ -4,7 +4,7 @@ let convo = JSON.parse(localStorage.getItem('chatBotJson'))
 this.chatwindow
 this.chat
 this.close_chat
-this.open_chat
+this.open_chat, this.open_chat2
 this.reload_chat
 
 this.chat_was_opened = false
@@ -60,27 +60,16 @@ function initChatComponents() {
   })
   this.chat = $('#chatbot')
   this.open_chat = $('#openChat')
+  this.open_chat2 = $('#openChat2')
+
   this.close_chat = $('#closeChat')
   this.reload_chat = $('#realoadChat')
   this.chat.css("display", 'none')
 }
 
 function addEvent() {
-  this.open_chat.click(function () {  // Open chat Btn Event
-    window.chat.css('display', 'block')
-    window.open_chat.css('display', 'none')
-    if (window.chat_was_opened === false) {
-      if (localStorage.getItem('chatIntro') === '1') {
-        window.chatWindow.talk(convo, 'Start')
-      } else {
-        window.chatWindow.talk(convo)
-      }
-      localStorage.setItem('chatIntro', 1)
-      setTimeout(function () {
-        localStorage.setItem('chatIntro', 0)
-      }, 3600 * 1000)
-      window.chat_was_opened = true
-    }
+  (this.open_chat,this.open_chat2).click(function () {  // Open chat Btn Event
+    openChat()
   })
 
   this.close_chat.click(function () {  // Open chat Btn Event
@@ -93,6 +82,22 @@ function addEvent() {
   })
 }
 
+function openChat(){
+  this.chat.css('display', 'block')
+    this.open_chat.css('display', 'none')
+    if (this.chat_was_opened === false) {
+      if (localStorage.getItem('chatIntro') === '1') {
+        this.chatWindow.talk(convo, 'Start')
+      } else {
+        this.chatWindow.talk(convo)
+      }
+      localStorage.setItem('chatIntro', 1)
+      setTimeout(function () {
+        localStorage.setItem('chatIntro', 0)
+      }, 3600 * 1000)
+      this.chat_was_opened = true
+    }
+}
 function loadJSON(callback) {
   let xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");

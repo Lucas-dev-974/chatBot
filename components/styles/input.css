@@ -24,4 +24,5 @@
 	width: 100% !important;
 	bottom: 0 !important;
 	position: absolute;
+	resize: none;
 }
