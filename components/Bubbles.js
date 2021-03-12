@@ -140,12 +140,12 @@ function Bubbles(container, self, options) {
       turn.reply.reverse()
       for (var i = 0; i < turn.reply.length; i++) {
         ; (function (el, count) {
-          let autoResponse = el.params ? "AutoResponse('" + el.params.value + "')"  : "";
-          let question        = el.links  ? ("<a href='" + el.links + "'>" + el.question + "</a>") : el.question
+          let autoResponse = el.params ? "AutoResponse('" + el.params.value + "');"  : "";
+          let redirect = el.links  ? ("window.location.href='" + el.links + "'") : ""
           questionsHTML +=
           '<span  class="bubble-button" style="animation-delay: ' + animationTime / 2 * count + 'ms"' + 
           'onClick="' + self + ".answer('" + el.answer + "', '" + el.question.replace("'", " ") + "')" + 
-          ";this.classList.add('bubble-pick');" + autoResponse +" \">" +  question + "</span>"
+          ";this.classList.add('bubble-pick');" + autoResponse  + redirect +" \">" +  el.question + "</span>"
         })(turn.reply[i], i)
       }
     }
