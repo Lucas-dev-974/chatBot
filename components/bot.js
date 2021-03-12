@@ -87,7 +87,7 @@ function openChat(){
     this.open_chat.css('display', 'none')
     if (this.chat_was_opened === false) {
       if (localStorage.getItem('chatIntro') === '1') {
-        this.chatWindow.talk(convo, 'Start')
+        this.chatWindow.talk(convo, 'Start2')
       } else {
         this.chatWindow.talk(convo)
       }

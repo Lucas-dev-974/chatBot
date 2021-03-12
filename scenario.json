@@ -39,6 +39,32 @@
         ]
     },
 
+    "Start2":{
+        "says": ["<span class='chatbot-title-conv'>Bonjour, comment puis-je vous aider ?</span> <br> "],
+        "reply": [
+            {
+                "question": "Je veux découvrir un produit",
+                "answer": "decouvrir un produit" 
+            },
+            {
+                "question": "J'ai un sinistre",
+                "answer": "sinistre"
+            },
+            {
+                "question": "Je veux me connecter à mon espace client Santé",
+                "answer": "Je veux me connecter à mon espace client Santé"
+            },
+            {
+                "question": "Je veux payer ma cotisation",
+                "answer": "Je veux payer ma cotisation"
+            }  ,
+            {
+                "question": "Je veux faire une demande ou contacter quelqu'un",
+                "answer": "Je veux faire une demande ou contacter quelqu un"
+            }  
+        ]
+    },
+
     "decouvrir un produit": {
         "says": ["Vous êtes un particulier ou un professionel ?"],
         "reply": [
