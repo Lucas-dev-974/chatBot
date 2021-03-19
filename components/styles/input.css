@@ -5,9 +5,8 @@
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	color: #2c2c2c;
 	width: 100%;
+	display: inline-flex;
 }
-
-
 
 .bubble-container .input-wrap textarea {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -20,9 +19,17 @@
 	border: none;
 	padding: 10px 15px;
 	outline: none;
-	/* box-shadow: 0 0 0 1px #d0d0d0 inset; */
-	width: 100% !important;
+	width: fit-content;
 	bottom: 0 !important;
-	position: absolute;
 	resize: none;
+	height: 45px;
+}
+
+#send_search{
+	background: rgba(44, 44, 44, 0.95);
+	color: rgb(228, 228, 228);
+	padding: 8px 16px;
+	text-align: center;
+	display: inline-block;
+	border: none;
 }

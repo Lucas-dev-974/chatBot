@@ -76,9 +76,15 @@ function Bubbles(container, self, options) {
   this.typeInput = function (callbackFn) {
     var inputWrap = document.createElement("div")
     inputWrap.className = "input-wrap"
-    var inputText = document.createElement("textarea")
+    var inputText  = document.createElement("textarea")
+    var sendButton = document.createElement("button")
+
+    sendButton.innerHTML = "envoyer"
+    sendButton.setAttribute('id', 'send_search')
+    inputText.setAttribute('id', 'user_input')
     inputText.setAttribute("placeholder", "Demander moi quelque chose...")
     inputWrap.appendChild(inputText)
+    inputWrap.appendChild(sendButton)
     inputText.addEventListener("keypress", function (e) {
       // register user input
       if (e.keyCode == 13) {
@@ -105,6 +111,30 @@ function Bubbles(container, self, options) {
           : false
         this.value = ""
       }
+    })
+
+    sendButton.addEventListener('click', function(){
+      typeof bubbleQueue !== false ? clearTimeout(bubbleQueue) : false // allow user to interrupt the bot
+        var lastBubble = document.querySelectorAll(".bubble.say")
+        lastBubble = lastBubble[lastBubble.length - 1]
+        lastBubble.classList.contains("reply") &&
+          !lastBubble.classList.contains("reply-freeform")
+          ? lastBubble.classList.add("bubble-hidden")
+          : false
+        addBubble(
+          '<span class="bubble-button bubble-pick" z-index="-9999">' + $('#user_input').val() + "</span>",
+          function () { },
+          "reply reply-freeform"
+        )
+        // callback
+        typeof callbackFn === "function"
+          ? callbackFn({
+            input:  $('#user_input').val(),
+            convo: _convo,
+            standingAnswer: standingAnswer
+          })
+          : false
+          $('#user_input').val() = ""
     })
     container.appendChild(inputWrap)
     bubbleWrap.style.paddingBottom = "100px"
