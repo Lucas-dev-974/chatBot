@@ -161,15 +161,17 @@ function Bubbles(container, self, options) {
   }
 
   var iceBreaker = false // this variable holds answer to whether this is the initative bot interaction or not
+
+
+  // Function pour afficher les propositions possible
   this.reply = function (turn) {
     iceBreaker = typeof turn === "undefined"
     turn = !iceBreaker ? turn : _convo.ice
     questionsHTML = ""
     if (!turn) return
     if (turn.reply !== undefined) {
-      turn.reply.reverse()
       for (var i = 0; i < turn.reply.length; i++) {
-        ; (function (el, count) {
+        (function (el, count) {
           let autoResponse = el.params ? "AutoResponse('" + el.params.value + "');"  : "";
           let redirect = el.links  ? ("window.location.href='" + el.links + "'") : ""
           questionsHTML +=

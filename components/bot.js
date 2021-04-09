@@ -11,6 +11,8 @@ this.chat_was_opened = false
 
 initChatComponents()
 addEvent()
+
+
 function initChatComponents() {
   chatWindow = new Bubbles(document.getElementById("chat"), "chatWindow", {
     inputCallbackFn: function (o) {
@@ -27,8 +29,7 @@ function initChatComponents() {
           "i-dont-get-it"
         )
       }
-      // console.log(o.convo[o.standingAnswer].reply); //Typing show possible response
-      // do this if answer found
+      // Si il y'a un match avec la recherce alors ->
       var match = function (key) {
         setTimeout(function () {
           chatWindow.talk(convo, key) // restart current convo from point found in the answer
@@ -68,7 +69,7 @@ function initChatComponents() {
 }
 
 function addEvent() {
-  (this.open_chat,this.open_chat2).click(function () {  // Open chat Btn Event
+  (this.open_chat).click(function () {  // Open chat Btn Event
     openChat()
   })
 
@@ -82,6 +83,7 @@ function addEvent() {
   })
 }
 
+// Ouvrir le chat
 function openChat(){
   this.chat.css('display', 'block')
     this.open_chat.css('display', 'none')
