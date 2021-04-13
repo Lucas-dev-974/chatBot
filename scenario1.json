@@ -149,6 +149,14 @@
         "says": ["Vous avez un sinistre, que souhaitez-vous faire ?"],
         "reply": [
             {
+                "question": "Déclarer un sinistre",
+                "answer": "Déclarer un sinistre"
+            },
+            {
+                "question": "Obtenir ou donner des informations sur un sinistre",
+                "answer": "Obtenir ou donner des informations sur un sinistre"
+            },
+            {
                 "question": "Contacter l'assistance",
                 "answer": "Contacter lassistance"
             },
@@ -158,7 +166,20 @@
             }
         ]
     },
-    "Déclarer un sinistre2": {
+
+    "Déclarer un sinistre": {
+        "says": ["Quel est le type de contrat concerné"],
+        "reply":[
+            {
+                "question": "Automobile",
+                "answer": "Déclarer un sinistre2"
+            },
+            {
+                "question": "Habitation ou Autres",
+                "answer": "Déclarer un sinistre2"
+            }
+        ]
+    },"Déclarer un sinistre2": {
         "says": ["Auprès de qui avez-vous signé votre contrat ?"],
         "reply":[
             {
@@ -201,6 +222,40 @@
                 "question": "Déclarer en ligne", "links": "/sites/default/files/inline-images/De%CC%81clarationdesinistre-DAB.pdf"
             }, {
                 "question": "Sinon cliquez <a href=\\'/contact\\'>ici</a> pour être contacté par nos services"
+            }
+        ]
+    },
+
+    "Obtenir ou donner des informations sur un sinistre":{
+        "says": ["Quel est le type de contrat concerné"],
+        "reply":[
+            {
+                "question": "Automobile",
+                "answer": "Obtenir ou donner des informations sur un sinistre2"
+            },
+            {
+                "question": "Habitation",
+                "answer": "Obtenir ou donner des informations sur un sinistre2"
+            }
+        ]
+    }, "Obtenir ou donner des informations sur un sinistre2": {
+        "says": ["Auprès de qui avez-vous signé votre contrat ?"],
+        "reply":[
+            {
+                "question": "Je ne sais pas ", "answer": "Sinistre-OI-je ne sais pas"
+            },
+            {
+                "question": "Agents ", "params": {
+                    "value": "Cliquez <a href=\\'/trouver-mon-agence\\'>ici</a> pour acceder à la liste et coordonnées de nos agents généraux "
+                }
+            },
+            {
+                "question": "Courtiers ", "params": {
+                    "value": "Cliquez <a href=\\'/nos-reseaux\\'>ici</a> pour acceder à la liste et coordonnées de nos courtiers"
+                }
+            },
+            {
+                "question": "Bureaux Prudence Créole", "answer": "Sinistre-OI-bureaux prudence creole"
             }
         ]
     },

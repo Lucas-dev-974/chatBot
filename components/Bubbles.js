@@ -19,6 +19,7 @@ function Bubbles(container, self, options) {
   // local storage for recalling conversations upon restart
   var localStorageCheck = function () {
     var test = "chat-bubble-storage-test"
+    console.log('Storage test');
     try {
       localStorage.setItem(test, test)
       localStorage.removeItem(test)
@@ -30,21 +31,14 @@ function Bubbles(container, self, options) {
       return false
     }
   }
-  var localStorageAvailable = localStorageCheck() && recallInteractions > 0
-  var interactionsLS = "chat-bubble-interactions"
-  var interactionsHistory =
-    (localStorageAvailable &&
-      JSON.parse(localStorage.getItem(interactionsLS))) ||
-    []
 
+  // Var to save historic of conversation
+  var localStorageAvailable = localStorageCheck() 
+  var interactionsLS        = "chat-bubble-interactions"
+  var interactionsHistory   = []
   // prepare next save point
   interactionsSave = function (say, reply) {
     if (!localStorageAvailable) return
-    // limit number of saves
-    if (interactionsHistory.length > recallInteractions)
-      interactionsHistory.shift() // removes the oldest (first) save to make space
-
-    // do not memorize buttons; only user input gets memorized:
     if (
       // `bubble-button` class name signals that it's a button
       say.includes("bubble-button") &&
@@ -63,7 +57,18 @@ function Bubbles(container, self, options) {
   // commit save to localStorage
   interactionsSaveCommit = function () {
     if (!localStorageAvailable) return
+    // if(localStorage.getItem(interactionsLS)){
+    //   console.log("Regenerate of last conv");
+    //   let historique  = JSON.parse(localStorage.getItem(interactionsLS))
+
+    //   historique.forEach((element) => {
+    //     interactionsHistory.push({ say: element.say, reply: element.reply })
+    //   });
+    // }
     localStorage.setItem(interactionsLS, JSON.stringify(interactionsHistory))
+    setTimeout(()=>{
+      localStorage.removeItem(interactionsLS)
+    }, 1*24*3600*1000 )
   }
 
   // set up the stage
@@ -172,12 +177,13 @@ function Bubbles(container, self, options) {
     if (turn.reply !== undefined) {
       for (var i = 0; i < turn.reply.length; i++) {
         (function (el, count) {
+          // console.log(typeof(el.params.value));
           let autoResponse = el.params ? "AutoResponse('" + el.params.value + "');"  : "";
           let redirect = el.links  ? ("window.location.href='" + el.links + "'") : ""
           questionsHTML +=
           '<span  class="bubble-button" style="animation-delay: ' + animationTime / 2 * count + 'ms"' + 
-          'onClick="' + self + ".answer('" + el.answer + "', '" + el.question.replace("'", " ") + "')" + 
-          ";this.classList.add('bubble-pick');" + autoResponse  + redirect +" \">" +  el.question + "</span>"
+          'onClick="' + autoResponse + self + ".answer('" + el.answer + "', '" + el.question.replace("'", " ") + "')" + 
+          ";this.classList.add('bubble-pick');"  + redirect +" \">" +  el.question + "</span>"
         })(turn.reply[i], i)
       }
     }

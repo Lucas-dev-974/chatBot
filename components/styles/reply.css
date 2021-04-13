@@ -66,7 +66,7 @@
   border-radius: 15px 15px 5px 15px;
 }
 .bubble.reply.bubble-picked .bubble-content .bubble-button {
-  transform: scale(0) translate3d(0px, 0px, 0px);
+  /* transform: scale(0) translate3d(0px, 0px, 0px); */
   padding: 0;
 }
 .bubble.reply:not(.bubble-picked) .bubble-content .bubble-button:hover,

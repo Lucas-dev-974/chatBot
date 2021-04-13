@@ -1,13 +1,12 @@
 loadJSON(function () { console.log("Get json chat ok"); })
 let convo = JSON.parse(localStorage.getItem('chatBotJson'))
 
-this.chatwindow
-this.chat
-this.close_chat
+this.chat_was_opened = (localStorage.getItem('chatIntro')) ? localStorage.getItem('chatIntro') : false
 this.open_chat, this.open_chat2
+this.chatwindow
+this.close_chat
 this.reload_chat
-
-this.chat_was_opened = false
+this.chat
 
 initChatComponents()
 addEvent()
@@ -69,37 +68,59 @@ function initChatComponents() {
 }
 
 function addEvent() {
-  (this.open_chat).click(function () {  // Open chat Btn Event
-    openChat()
-  })
+  (this.open_chat).click(() => { openChat() })
 
-  this.close_chat.click(function () {  // Open chat Btn Event
+  this.close_chat.click(() => {  // Open chat Btn Event
     window.chat.css('display', 'none')
     window.open_chat.css('display', 'block')
   })
 
-  this.reload_chat.click(function () {
-    reload()
-  })
+  this.reload_chat.click(() => { reload() })
 }
 
 // Ouvrir le chat
 function openChat(){
   this.chat.css('display', 'block')
-    this.open_chat.css('display', 'none')
-    if (this.chat_was_opened === false) {
-      if (localStorage.getItem('chatIntro') === '1') {
-        this.chatWindow.talk(convo, 'Start2')
-      } else {
-        this.chatWindow.talk(convo)
-      }
-      localStorage.setItem('chatIntro', 1)
-      setTimeout(function () {
-        localStorage.setItem('chatIntro', 0)
-      }, 3600 * 1000)
-      this.chat_was_opened = true
+  this.open_chat.css('display', 'none')
+  let historique = (localStorage.getItem('chat-bubble-interactions')) ? JSON.parse(localStorage.getItem('chat-bubble-interactions')) : null
+
+  if(historique){ // Si une conversation existe déjà alors on l'affiche
+    let last = historique.length - 1
+    if(historique[last].reply == ""){
+      let key = this.get_key(historique[last].say)
+      historique.pop() // Remove last element 
+      this.chatWindow.talk(convo, key)
     }
+
+    //  ---------------- Scroll when changin page -------------
+    // let chat_content = $('#chat .bubble-wrap')
+    // let chat_typing  = $("#chat .bubble-wrap .bubble-typing .imagine")
+
+    // // Parcour l'historique de la conversation pour y afficher les élements
+    // historique.forEach((element) => {
+    //   var div  = document.createElement('div')
+    //   var span = document.createElement('span')
+    //   span.setAttribute('class', "bubble-content")
+
+    //   if(element.reply == "reply reply-pick"){
+    //     div.setAttribute('class', 'bubble reply say bubble-picked')
+    //   }else{
+    //     div.setAttribute('class', 'bubble say')
+    //   }
+
+    //   // Ajout de l'historique de la conv au chat
+    //   span.innerHTML += (element.say)
+    //   div.append(span)
+    //   chat_content.insertBefore(div, chat_typing)
+    // })
+
+  }else{
+    this.chatWindow.talk(convo, 'ice')
+    
+  }
 }
+
+// Function to load scenario
 function loadJSON(callback) {
   let xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
@@ -112,21 +133,18 @@ function loadJSON(callback) {
   };
   xobj.send(null);
 }
-// pass JSON to your function and you're done!
-// chatWindow.talk(convo)
-
-
 
 function closeChat() {
   this.chat.css('display', 'none')
   this.open_chat.css('display', 'block')
   reload()
-
 }
 
 function reload() {
+  localStorage.removeItem("chat-bubble-interactions")
   $('.bubble-wrap').html('')
-  window.chatWindow.talk(convo, 'Start')
+  window.chatWindow.talk(convo, 'Start2')
+ 
 }
 
 function AutoResponse(value) {
@@ -135,5 +153,14 @@ function AutoResponse(value) {
   div.innerHTML = value
   $('.bubble-typing.imagine').remove()
   $('.bubble-wrap').append(div)
-  this.chatWindow.talk(convo, 'AnotherQuestion')
 }
+
+
+function get_key(phrase){
+  for(const [key, value] of Object.entries(convo)){
+    if(value.says[0] === phrase){
+      return key
+    }
+  }
+}
+
