@@ -97,7 +97,7 @@
             }  
         ]
     }, "formule Auto":{
-        "says": ["Voulez-vous voir les formules ou faire un devis Auto ?"],
+        "says": ["Voulez-vous voir les formules ou demander un devis Auto ?"],
         "reply":[
             {
                 "question": "Voir les formules", "links": "/automobile-4-roues"
@@ -106,7 +106,7 @@
             }
         ]
     },"formule Habitation":{
-        "says": ["Voulez-vous voir les formules ou faire un devis Habitation ?"],
+        "says": ["Voulez-vous voir les formules ou demander un devis Habitation ?"],
         "reply":[
             {
                 "question": "Voir les formules ", "links": "/multirisque-habitation"
@@ -115,7 +115,7 @@
             }
         ]
     },"formule Complémentaire Santé":{
-        "says": ["Voulez-vous voir les formules ou faire un devis Complémentaire santé ?"],
+        "says": ["Voulez-vous voir les formules ou demander un devis Complémentaire santé ?"],
         "reply":[
             {
                 "question": "Voir les formules ", "links": "/complementaire-sante"
@@ -124,12 +124,12 @@
             }
         ]
     },"formule Assurence Décès Invalidité":{
-        "says": ["Voulez-vous voir les formules ou faire un devis Assurance Décès/Invalidité ?"],
+        "says": ["Voulez-vous voir les formules ou demander un devis Assurance Décès/Invalidité ?"],
         "reply":[
             {
                 "question": "Voir les formules ", "links": "/prevoyance"
             },{
-                "question": "Faire un devis ", "links": "/assurance-deces-invalidite"
+                "question": "Demander un devis ", "links": "/assurance-deces-invalidite"
             }
         ]
     },
@@ -138,7 +138,7 @@
         "says": ["En tant que professionnel nous vous invitons à visiter l'onglet professionnel"],
         "reply": [
             {
-                "question": "Découvrir nos offres pour les Professionnels »", "links": "/professionnels"
+                "question": "Découvrir nos offres pour les Professionnels", "links": "/professionnels"
             }, {
                 "question": " Etre contacté par un conseiller", "links": "/contact"
             }
@@ -177,7 +177,7 @@
                 }
             },
             {
-                "question": "Bureaux Prudence Créole", 
+                "question": "Bureaux direct", 
                 "answer": "DS-sinistre Bureaux"
             }
         ]
@@ -209,7 +209,7 @@
         "says": ["Que souhaitez-vous faire ?"],
         "reply":[
             {
-                "question": "Envoyer ou demander des informations", "links": "/sites/default/files/inline-images/De%CC%81clarationdesinistre-DAB.pdf"
+                "question": "Envoyez ou demander des informations", "links": "/sites/default/files/inline-images/De%CC%81clarationdesinistre-DAB.pdf"
             },{
                 "question": "Cliquez <a href=\\'/contact\\'>ici</a> pour être contacté par nos Services ", "links":"/contact"
             }
@@ -246,7 +246,7 @@
             {
                 "question": " Pour une assistance immédiate, vous pouvez contacter le numéro <a href='tel:0262 20 48 48' > 0262 20 48 48 </a>"
             },{
-                "question": "Cliquez <a href='\\/contact\\'>ici</a> pour être contacté par nos Services"
+                "question": "Cliquez <a href='/contact'>ici</a> pour être contacté par nos Services"
             }
         ]
     },"Contacter lassistance mayotte": {
@@ -255,7 +255,7 @@
             {
                 "question": " Pour une assistance immédiate, vous pouvez contacter le numéro <a href='tel:0269 63 48 48' > 0269 63 48 48 </a>"
             },{
-                "question": "Cliquez <a href='\\/sinistre\\'>ici</a> pour avoir des conseils en cas de sinistre"
+                "question": "Cliquez <a href='/sinistre'>ici</a> pour avoir des conseils en cas de sinistre"
             }
         ]
     },
@@ -304,10 +304,10 @@
         "says": ["Bienvenue chez Prudence Créole, que souhaitez-vous faire ?"],
         "reply":[
             {
-                "question": "Etre rappelé par un conseiller"
+                "question": "Etre rappelé par un conseiller", "links": "/contact"
             },
             {
-                "question": "Localiser l agence la plus proche", "links": "/trouver-mon-agence"
+                "question": "Localiser l'agence la plus proche", "links": "/trouver-mon-agence"
             }
         ]
     }, "demande ou contacter oui": {
@@ -360,14 +360,14 @@
             {
                 "question": "Ajouter un bénéficaire ayant-droit",
                 "params": {
-                    "value": "Envoyer par mail l\\'attestation Sécurité Sociale à jour (avec les personnes à ajouter)"
+                    "value": "Envoyez par mail l\\'attestation Sécurité Sociale à jour (avec les personnes à ajouter)"
                 },
                 "answer": "Souhaitez-vous"
             }, 
             {
                 "question": "Déclarer une naissance et obtenir ma  prime de naissance",
                 "params": {
-                    "value": "Envoyer par mail à votre interlocuteur habituel l\\'attestation Sécutité Sociale à jour + acte de naissance"
+                    "value": "Envoyez par mail à votre interlocuteur habituel l\\'attestation Sécutité Sociale à jour + acte de naissance"
                 },
                 "answer": "Souhaitez-vous"
             }
@@ -413,7 +413,7 @@
         "says": ["Que souhaitez-vous faire ?"],
         "reply":[
             {
-                "question": "Cliquez <a href='#'>ici</a> pour prendre connaissance du mode opératoire de la gestion des frais médicaux à la Réunion"
+                "question": "Cliquez <a href='/sites/default/files/inline-images/Mode%20operatoire%20-%20Gestion%20des%20frais%20medicaux%20a%20La%20Reunion.pdf'>ici</a> pour prendre connaissance du mode opératoire de la gestion des frais médicaux à la Réunion"
             },
             {
                 "question": "Sinon veuillez nous appeler au <a href='tel:0262709500'>0262 70 95 00</a>"
@@ -425,7 +425,7 @@
         "says": ["Pouvez-vous préciser le motif de votre demande"],
         "reply":[
             {
-                "question": "Obtenir une attestation ou un document lié à mon contrat",
+                "question": "Obtenir une attestation ou un document lié à un contrat",
                 "answer": "contrat"
                 
             },
@@ -468,7 +468,7 @@
                 }
             },
             {
-                "question": "Bureaux directs ", 
+                "question": "Bureaux directs", 
                 "params": {
                     "value": "Cliquez <a href=\\'/trouver-mon-agence\\'>ici</a> pour acceder à la liste et coordonnées de nos bureaux directs "
                 }
