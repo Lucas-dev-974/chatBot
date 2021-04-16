@@ -68,7 +68,7 @@ function Bubbles(container, self, options) {
     localStorage.setItem(interactionsLS, JSON.stringify(interactionsHistory))
     setTimeout(()=>{
       localStorage.removeItem(interactionsLS)
-    }, 1*24*3600*1000 )
+    }, 1*24*3600*1000  )
   }
 
   // set up the stage
@@ -179,7 +179,8 @@ function Bubbles(container, self, options) {
         (function (el, count) {
           // console.log(typeof(el.params.value));
           let autoResponse = el.params ? "AutoResponse('" + el.params.value + "');"  : "";
-          let redirect = el.links  ? ("window.location.href='" + el.links + "'") : ""
+          let redirect = el.links  ? ("window.location.href='" + el.links + "'") : "";
+          (el.links) ? console.log(el.links) : false;
           questionsHTML +=
           '<span  class="bubble-button" style="animation-delay: ' + animationTime / 2 * count + 'ms"' + 
           'onClick="' + autoResponse + self + ".answer('" + el.answer + "', '" + el.question.replace("'", " ") + "')" + 

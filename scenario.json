@@ -64,7 +64,7 @@
     },
 
     "decouvrir un produit": {
-        "says": ["Vous êtes un particulier ou un professionel ?"],
+        "says": ["Vous êtes un particulier ou un professionnel ?"],
         "reply": [
             {
                 "question": "Professionnel",
@@ -92,7 +92,7 @@
             },{
                 "question": "Autres produits", "params": {
                     "value": "Cliquez <a href=\\'/accueil#boxtop\\'>ici</a> Découvrir nos offres pour les Particuliers"
-                }
+                }, "links": "/accueil#boxtop"
             }  
         ]
     }, "formule Auto":{
@@ -168,12 +168,12 @@
                 "question": "Agents ", 
                 "params": {
                     "value": "Cliquez <a href=\\'/trouver-mon-agence\\'>ici</a> pour acceder à la liste et coordonnées de nos agents généraux "
-                }
+                }, "links": "/trouver-mon-agence"
             },
             {
                 "question": "Courtiers ", "params": {
                     "value": "Cliquez <a href=\\'/nos-reseaux\\'>ici</a> pour acceder à la liste et coordonnées de nos courtiers "
-                }
+                }, "links": "/nos-reseaux"
             },
             {
                 "question": "Bureaux direct", 
@@ -199,7 +199,7 @@
             {
                 "question": "Déclarer en ligne", "links": "/sites/default/files/inline-images/De%CC%81clarationdesinistre-DAB.pdf"
             }, {
-                "question": "Sinon cliquez <a href=\\'/contact\\'>ici</a> pour être contacté par nos services"
+                "question": "Sinon cliquez <a href=\\'/contact\\'>ici</a> pour être contacté par nos services", "links": "/contact"
             }
         ]
     },
@@ -219,9 +219,9 @@
         "says": ["Que souhaitez vous fairez"],
         "reply": [
             {
-                "question": "Cliquez <a href=\\'/nos-reseaux\\'>ici</a> pour acceder à la liste et coordonnées de nos réseaux de distribution"
+                "question": "Cliquez <a href=\\'/nos-reseaux\\'>ici</a> pour acceder à la liste et coordonnées de nos réseaux de distribution", "links": "/nos-reseaux"
             }, {
-                "question": " Cliquez <a href=\\'/sinistre\\'>ici</a> pour avoir des conseils en cas de sinistre"
+                "question": " Cliquez <a href=\\'/sinistre\\'>ici</a> pour avoir des conseils en cas de sinistre", "links": "/sinistre"
             }
         ]
     },
@@ -243,18 +243,18 @@
         "says": ["Vous avez choisi La Réunion :"],
         "reply":[
             {
-                "question": " Pour une assistance immédiate, vous pouvez contacter le numéro <a href='tel:0262 20 48 48' > 0262 20 48 48 </a>"
+                "question": " Pour une assistance immédiate, vous pouvez contacter le numéro <a href='tel:0262 20 48 48' > 0262 20 48 48 </a>", "links": "tel:0262 20 48 48"
             },{
-                "question": "Cliquez <a href='/contact'>ici</a> pour être contacté par nos Services"
+                "question": "Cliquez <a href='/contact'>ici</a> pour être contacté par nos Services", "links": "/contact"
             }
         ]
     },"Contacter lassistance mayotte": {
         "says": ["Vous avez choisi Mayotte :"],
         "reply":[
             {
-                "question": " Pour une assistance immédiate, vous pouvez contacter le numéro <a href='tel:0269 63 48 48' > 0269 63 48 48 </a>"
+                "question": " Pour une assistance immédiate, vous pouvez contacter le numéro <a href='tel:0269 63 48 48' > 0269 63 48 48 </a>", "links": "tel:0269 63 48 48"
             },{
-                "question": "Cliquez <a href='/sinistre'>ici</a> pour avoir des conseils en cas de sinistre"
+                "question": "Cliquez <a href='/sinistre'>ici</a> pour avoir des conseils en cas de sinistre", "links": "/sinistre"
             }
         ]
     },
@@ -265,7 +265,7 @@
             {
                 "question": "Autre", "params": {
                     "value": "Cliquer <a href=\\'/trouver-un-garage-agree \\'>ici</a> pour acceder à la page pour trouver un garage partenaire"
-                }
+                }, "links": "/trouver-un-garage-agree"
             },
             {
                 "question": "Un bris de glaces", "links": "/trouver-un-garage-agree"
@@ -353,7 +353,7 @@
                 "question": "Signaler un problème de carte à puce",
                 "params": {
                     "value": "Veuillez-vous rendre en agence. Cliquez <a href=\\'/trouver-mon-agence\\'>ici</a> pour trouver une agence"
-                }
+                }, "links": "/trouver-mon-agence"
             },
             {
                 "question": "Ajouter un bénéficaire ayant-droit",
@@ -408,10 +408,11 @@
         "says": ["Que souhaitez-vous faire ?"],
         "reply":[
             {
-                "question": "Cliquez <a href='/sites/default/files/inline-images/Mode%20operatoire%20-%20Gestion%20des%20frais%20medicaux%20a%20La%20Reunion.pdf'>ici</a> pour prendre connaissance du mode opératoire de la gestion des frais médicaux à la Réunion"
+                "question": "Cliquez <a href='/sites/default/files/inline-images/Mode%20operatoire%20-%20Gestion%20des%20frais%20medicaux%20a%20La%20Reunion.pdf'>ici</a> pour prendre connaissance du mode opératoire de la gestion des frais médicaux à la Réunion", 
+                "links": "/sites/default/files/inline-images/Mode%20operatoire%20-%20Gestion%20des%20frais%20medicaux%20a%20La%20Reunion.pdf"
             },
             {
-                "question": "Sinon veuillez nous appeler au <a href='tel:0262709500'>0262 70 95 00</a>"
+                "question": "Sinon veuillez nous appeler au <a href='tel:0262709500'>0262 70 95 00</a>", "links": "tel:0262709500"
             }
         ]
     },
@@ -447,23 +448,24 @@
         "reply":[
             {
                 "question": "Agents", 
-                "params":{ "value": "Cliquez <a href=\\'/trouver-mon-agence\\'>ici</a> pour acceder à la liste et coordonnées de nos agents généraux"}
+                "params":{ "value": "Cliquez <a href=\\'/trouver-mon-agence\\'>ici</a> pour acceder à la liste et coordonnées de nos agents généraux"},
+                "links": "/trouver-mon-agence"
                 
             },{
                 "question": "Bureaux directs", 
                 "params": {
                     "value": "Cliquez <a href=\\'/trouver-mon-agence\\'>ici</a> pour acceder à la liste et coordonnées de nos bureaux directs "
-                }
+                },"links": "/trouver-mon-agence"
             },{
                 "question": "Je ne sais pas ", 
                 "params": {
                     "value": "Cliquez <a href=\\'/nos-reseaux\\'>ici</a> pour acceder à la liste et coordonnées de nos réseaux de distribution"
-                }
+                }, "links": "/nos-reseaux"
             },{
                 "question": "Courtiers",
                 "params": {
                     "value": "Cliquez <a href=\\'/nos-reseaux#courtiers\\'>ici</a> pour acceder à la liste et coordonnées de nos courtiers "
-                }
+                }, "links": "/nos-reseaux#courtiers"
             }
             
         ]
