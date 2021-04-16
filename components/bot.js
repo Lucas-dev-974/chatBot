@@ -1,19 +1,31 @@
-loadJSON(function () { console.log("Get json chat ok"); })
-let convo = JSON.parse(localStorage.getItem('chatBotJson'))
-
+this.local = false
 this.chat_was_opened = (localStorage.getItem('chatIntro')) ? localStorage.getItem('chatIntro') : false
 this.open_chat, this.open_chat2
 this.chatwindow
 this.close_chat
 this.reload_chat
 this.chat
+  
 
-initChatComponents()
-addEvent()
 
+loadJSON(function () { console.log("Get json chat ok"); }) // On charge le scenario json
+
+setTimeout(() => { // On met un temp de 1 milliseconde pour laisser le chat json se charger correctement
+  this.convo = JSON.parse(localStorage.getItem('chatBotJson'))
+  initChatComponents()
+  addEvent()
+}, 1);
 
 function initChatComponents() {
-  chatWindow = new Bubbles(document.getElementById("chat"), "chatWindow", {
+  this.chat = $('#chatbot')
+  this.open_chat = $('#openChat')
+  this.open_chat2 = $('#openChat2')
+
+  this.close_chat = $('#closeChat')
+  this.reload_chat = $('#realoadChat')
+  this.chat.css("display", 'none')
+
+  this.chatWindow = new Bubbles(document.getElementById("chat"), "chatWindow", {
     inputCallbackFn: function (o) {
       var miss = function () {
         chatWindow.talk(
@@ -58,17 +70,11 @@ function initChatComponents() {
       found ? match(found) : miss()
     }
   })
-  this.chat = $('#chatbot')
-  this.open_chat = $('#openChat')
-  this.open_chat2 = $('#openChat2')
-
-  this.close_chat = $('#closeChat')
-  this.reload_chat = $('#realoadChat')
-  this.chat.css("display", 'none')
 }
 
+
 function addEvent() {
-  (this.open_chat).click(() => { openChat() })
+  (this.open_chat2, this.open_chat).click(() => { openChat() })
 
   this.close_chat.click(() => {  // Open chat Btn Event
     window.chat.css('display', 'none')
@@ -129,9 +135,11 @@ function loadJSON(callback) {
     if (xobj.readyState == 4 && xobj.status == "200") {
       callback(xobj.responseText);
       localStorage.setItem('chatBotJson', xobj.responseText)
+      window.local = true
     }
   };
   xobj.send(null);
+  return true
 }
 
 function closeChat() {
