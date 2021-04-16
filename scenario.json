@@ -67,23 +67,22 @@
         "says": ["Vous êtes un particulier ou un professionel ?"],
         "reply": [
             {
-                "question": "Particulier",
-                "answer": "particulier"
-            },
-            {
                 "question": "Professionnel",
                 "answer": "professionnel"
+            },{
+                "question": "Particulier",
+                "answer": "particulier"
             }
         ]
     }, "particulier": {
         "says": ["Vous êtes donc un particulier, quel produit souhaitez-vous découvrir ?"],
         "reply": [
             {
-                "question": "Auto",
-                "answer": "formule Auto"
-            },{
                 "question": "Habitation",
                 "answer": "formule Habitation"
+            },{
+                "question": "Auto",
+                "answer": "formule Auto"
             },{
                 "question": "Complémentaire Santé",
                 "answer": "formule Complémentaire Santé"
@@ -291,14 +290,13 @@
         "says": ["Pour vous aider à contacter votre interlocuteur, pouvez-vous me confirmer que vous êtes bien déjà client chez nous"],
         "reply":[
             {
+                "question": "non",
+                "answer": "demande ou contacter non"
+            }, {
                 "question": "oui",
                 "answer": "demande ou contacter oui"
                 
-            },  
-            {
-                "question": "non",
-                "answer": "demande ou contacter non"
-            }
+            } 
         ]
     }, "demande ou contacter non": {
         "says": ["Bienvenue chez Prudence Créole, que souhaitez-vous faire ?"],
@@ -392,20 +390,17 @@
         "says": ["De quoi s'agit-il ?"],
         "reply":[
             {
+                "question": "Hospitalisation",
+                "answer": "Medical"
+            },{
                 "question": "Soins courants",
                 "answer": "Medical"
                 
-            },
-            {
-                "question": "Hospitalisation",
-                "answer": "Medical"
-            },
-            {
-                "question": "Optique",
-                "answer": "Medical"
-            },
-            {
+            },{
                 "question": "Dentaire",
+                "answer": "Medical"
+            },{
+                "question": "Optique",
                 "answer": "Medical"
             }
         ]
@@ -451,28 +446,26 @@
         "says": ["Auprès de qui avez-vous signé votre contrat ?"],
         "reply":[
             {
-                "question": "Je ne sais pas ", 
-                "params": {
-                    "value": "Cliquez <a href=\\'/nos-reseaux\\'>ici</a> pour acceder à la liste et coordonnées de nos réseaux de distribution"
-                }
-            },
-            {
                 "question": "Agents", 
                 "params":{ "value": "Cliquez <a href=\\'/trouver-mon-agence\\'>ici</a> pour acceder à la liste et coordonnées de nos agents généraux"}
                 
-            },
-            {
-                "question": "Courtiers",
-                "params": {
-                    "value": "Cliquez <a href=\\'/nos-reseaux#courtiers\\'>ici</a> pour acceder à la liste et coordonnées de nos courtiers "
-                }
-            },
-            {
+            },{
                 "question": "Bureaux directs", 
                 "params": {
                     "value": "Cliquez <a href=\\'/trouver-mon-agence\\'>ici</a> pour acceder à la liste et coordonnées de nos bureaux directs "
                 }
+            },{
+                "question": "Je ne sais pas ", 
+                "params": {
+                    "value": "Cliquez <a href=\\'/nos-reseaux\\'>ici</a> pour acceder à la liste et coordonnées de nos réseaux de distribution"
+                }
+            },{
+                "question": "Courtiers",
+                "params": {
+                    "value": "Cliquez <a href=\\'/nos-reseaux#courtiers\\'>ici</a> pour acceder à la liste et coordonnées de nos courtiers "
+                }
             }
+            
         ]
     },
 
